@@ -1,0 +1,274 @@
+@font-face {
+    font-family: "Gliroy"; 
+    src: url("../fonts/Gilroy-Regular.eot"); 
+
+    src: url("../fonts/Gilroy-Regular.woff") format("woff"), 
+         url("../fonts/Gilroy-Regular.ttf") format("truetype"); 
+         
+    font-style: normal;
+    font-weight: normal; 
+}
+
+/* SETTINGS */
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    display: inline;
+}
+
+body, span, h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+    font-family: Gliory, sans-serif;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 945px;
+}
+
+.container-contact {
+    margin: 0 auto;
+    max-width: 342px;
+}
+
+/* HEADER */
+
+.nav {
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid #828282;
+    &>a {
+        color: #828282 ;
+        font-weight: Bold;
+        transition: all .5s ease;
+        &:hover {
+            color: #070707;
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* INFO */
+
+.info {
+    padding-bottom: 120px;
+
+    &>.container>.info-desc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        padding: 40px 0;
+
+        &>.info-lang {
+            transform: rotate(270deg);
+            font-weight: 700;
+
+            #vertical-stick {
+                color: #000;
+                cursor: pointer;
+            }
+
+            .lang-ru,
+            .lang-en {
+                color: #828282;
+                transition: all .5s ease;
+            }
+
+            .lang-ru:hover,
+            .lang-en:hover {
+                color: #070707;
+            }
+        }
+
+        &>.info-job {
+            font-weight: Medium;
+            align-self: flex-end;
+        }
+    }
+
+    &>.container>.info-img > img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ABOUT */
+
+.about {
+    background-color: #F6F6F6;
+    padding: 80px 0;
+
+    text-align: center;
+
+    &>.container>.about-text {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        font-weight: Medium;
+        line-height: 22px;
+    }
+
+    &>.container>.about-title {
+        padding: 0 30px 30px 30px;
+        font-weight: Bold;
+    }
+}
+
+/* SKILLS */
+
+.skills {
+    text-align: center;
+    padding: 80px 0 100px 0;
+
+    &>.container>.skills-programs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 60px;
+    }
+
+    &>.skills-flex {
+        display: flex;
+        flex-direction:column;
+        gap: 70px;
+    }
+
+    &>.skills-flex>h1 {
+        color: #070707;
+        font-weight: 700;
+    }
+
+    &>.skills-flex>span {
+        color: #070707;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    &>.skill-info {
+        display: inline-flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        gap: 20px;
+
+        max-width: 90px;
+        height: auto;
+
+    }
+
+
+    &>.rating {
+        display: flex;
+        flex: 0 0 auto;
+        gap: 20px;
+    }
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background-color: #F6F6F6;
+    padding: 120px 0;
+    &>.portfolio-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+
+        text-align: center;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    text-align: center;
+
+    &>.project-link {
+        color: #070707;
+        font-weight: 500;
+        font-size: 18px;
+
+        transition: all .5s ease;
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+    &>.project-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* CONTACTS */
+
+.contacts {
+    padding: 120px 0 120px 0;
+    text-align: center;
+    &>.container-contact>.contacts-info {
+        color: #070707;
+
+        &>.contacts-info__name {
+            font-size: 34px;
+            font-weight: Bold;
+        }
+        &>.contacts-info__text {
+            font-weight: 500;
+            font-size: 18px;
+
+            margin: 20px 0 30px 0;
+        }
+        &>.contacts-info__send {
+            background-color: #070707;
+            padding: 10px 25px;
+
+            border-radius: 25px;
+
+            &>span {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &>.container-contact>.contacts-links {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 75px 0 45px 0;
+    }
+
+    &>.container-contact>.contacts-footer {
+        line-height: 17px;
+        color: #828282;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about, .contacts, .portfolio, .skills {
+        padding: 70px 0;
+    }
+    .info {
+        padding-bottom: 70px;
+    }
+}
